@@ -23,3 +23,14 @@ Afterwards enter the following command to build and install slock
 * Running slock
 
 Simply invoke the =slock= command. To get out of it, enter your password.
+* Message patch
+
+The lock screen display a message. A default message can be defined in =config.h=, moreover, the message can also be passed using the =-m= command line option.
+
+For example,
+
+#+begin_src shell
+  slock -m "Locked at $(date)"
+#+end_src
+
+Note: the =font_name= variable in =config.h= must be set to a valid X11 font. To get a list of X11 fonts, run =slock -f=.
